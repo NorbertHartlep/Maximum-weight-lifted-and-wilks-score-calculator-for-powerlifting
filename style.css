@@ -1,0 +1,181 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box; 
+}
+html{
+  background-color: rgb(67, 150, 89);
+}
+header{
+    background-color: chartreuse;
+    font-family: 'Oswald', sans-serif;
+}
+body{
+    text-align: center;
+    font-family: montserrat;
+}
+nav{
+    position: fixed;
+    background: chocolate;
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 70px;
+    font-weight: bold;
+}
+nav ul{
+float: right;
+margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin:0 5px;
+}
+nav ul li a{
+    color:white;
+    transition: 0.2s ease-out ;
+    cursor:pointer;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+}
+a.active,a:hover{
+    background:#3c763d;
+    transition:.5s;
+    color:black;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+.menu{
+    font-size: 16px;
+    color: white;
+}
+h1.hea1{
+    margin-top: 4px;
+    margin-bottom: -20px;
+    font-size: 45px;
+    padding: 15px;
+    border-bottom: 4px solid green;
+
+}
+h2{
+    background-color: #dff0d8;
+    padding: 15px 0px;
+    color: #3c763d;
+    margin-top: 0;
+    
+}
+#onerm, #wilks, #equa{
+background-color: rgb(67, 150, 89);
+font-family: 'Bebas Neue', cursive;
+padding-top: 80px;
+}
+button.btn.btn-success.checkbutton{
+    padding: 5px 15px;
+    margin-top: 20px ;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+box-shadow: 0 4px 6px rgba(0,0,0,0.16),
+                0 2px 5px rgba(0,0,0,0.26);
+    transition: 0.3s ease-out ;
+    cursor:pointer;
+    font-size: 25px;
+}
+input{
+    border-radius: 5px;
+    padding: 3px 3px;
+}
+.descr{
+font-size: 22px;
+}
+.choose{
+    font-size: 18px;
+}
+.showmax.text-success.bg-success{
+    border: 2px solid green;
+    padding:8px;
+    font-size: 18px;
+    display: none;
+    margin-bottom: 30px;
+}
+.reps, .weight, .weight2, .bw{
+    background-color: #3c763d;
+    color:black;
+    font-size:16px;
+    padding: 5px 10px;
+}
+.bottomh2{
+margin-top: 0;
+}
+.anim1{
+    margin:  30px auto 0px auto;
+    width: 300px; 
+    height: 300px;
+}
+#check{
+    display: none;
+}
+#check ~ ul{
+left:0;
+}
+@media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+@media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: chocolate;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: silver;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+  blockquote , .blockquote-reverse{
+    float: left;
+    width: 50%;
+    font-size: 18px;
+    text-align: center;
+  }

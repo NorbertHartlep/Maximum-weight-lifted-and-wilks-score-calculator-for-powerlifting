@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" desc></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <header>
+        
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Strength checker</label>
+            <ul>
+                <li><a href="#onerm" class="menu">One rep max</a></li>
+                <li><a href="#wilks" class="menu">Wilks points </a></li>
+                <li><a href="#equa" class="menu">Equations used to calc </a></li>   
+            </ul>
+        </nav>
+    </header>
+    <div id="onerm" method="post">
+        <h2>How much weight can you lift per once? If you scared, just check it there!</h2>
+        <form>
+        <div class="descr"> What the weight is?</div>
+        <input type="text" class="weight" id="weight">
+        <br><br>
+       <div class="descr"> How many reps?</div>
+        <input type="text" class="reps" id="reps">
+        </form>
+       <br><br><br>
+        
+    <button type="button" class="btn btn-success checkbutton" onclick="checkk()">
+        Check your one rep max!
+    </button>
+    <div class="showmax text-success bg-success" id="effect">
+    </div>
+    <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_ocusgcsp.json"  mode="bounce" background="transparent"  speed="1.5" loop class="anim1" autoplay></lottie-player>
+</div>
+    <div id="wilks">
+        <h2 class="bottomh2">Did you even tried to powerlifting? compare yourself to pro's and check wilks score</h2>
+        <div class="descr"> What the lifted weight is?</div>
+        <input type="text" class="weight2" id="weight2">
+        <div class="descr"> What is your weight?</div>
+        <input type="text" class="bw" id="bw"><br><br>
+        <div class="descr"> What is your gender?</div>
+       <input type="radio" id="Male" name="gender" value="Male">
+           <div class="choose">Male</div>
+        
+        <input type="radio" id="Female" name="gender" value="Female">
+        <div class="choose">Female</div>
+                <br>
+        <br>
+        <button type="button" class="btn btn-success checkbutton" onclick="checkkk()">
+            Check your Wilks score!
+        </button>
+        <div class="showmax text-success bg-success" id="effect2"></div>
+        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_ocusgcsp.json" mode="bounce" background="transparent"  speed="1.5" loop class="anim1" autoplay></lottie-player>
+    </div>
+    <div id="equa">
+<h2 class="bottomh2">Equations used for theese calculators</h2>
+<blockquote>
+<h4>One rep max formula</h4>
+For every rep you do it adds 0.03 of it's value to total score.<br>
+So the formula (W is weight provided, and r is reps value) is:<br>
+ <code>W + W * R * 0.03</code>
+</blockquote>
+<blockquote class="blockquote blockquote-reverse">
+<h4>Sinclair formula</h4> 
+The calculator doing equations with provided data, and constans who are diffrent for both genders.<br>
+The const values:<br>
+For male:<br>
+<code>a = -216.0475144</code><br>
+<code>b = 16.2606339</code><br>
+<code>c = -0.002388645</code><br>
+<code>d = -0.00113732</code><br>
+<code>e = 7.01863E-06</code><br>
+<code>f = -1.291E-08</code><br>
+For female:<br>
+<code>a = 594.31747775582</code><br>
+<code>b = -27.23842536447</code><br>
+<code>c = 0.82112226871</code><br>
+<code>d = -0.00930733913</code><br>
+<code>e = 4.731582E-05</code><br>
+<code>f = -9.054E-08</code><br>
+And the equation(W is weight provided, and x is the body weight):<br>
+<code>W * 500 / (a + bx + cx² + dx³ + ex⁴ + fx⁵)</code>
+</blockquote>
+    </div>
+</body>
+</html>
